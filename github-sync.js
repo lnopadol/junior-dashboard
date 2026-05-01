@@ -140,6 +140,29 @@ GH.flush = async () => {
   }
 };
 
+// ---- Refresh trigger (calls GitHub Actions repository_dispatch) ----
+GH.triggerRefresh = async () => {
+  if (!GH.isSignedIn()) throw new Error("Sign in first");
+  const url = `https://api.github.com/repos/${GH.owner}/${GH.repo}/dispatches`;
+  const res = await fetch(url, {
+    method: "POST",
+    headers: { ...GH.headers(), "Content-Type": "application/json" },
+    body: JSON.stringify({ event_type: "refresh-dashboard" }),
+  });
+  if (res.status === 204) return true;
+  const errText = await res.text();
+  throw new Error(`Refresh trigger failed (${res.status}): ${errText.slice(0, 200)}`);
+};
+
+// Polls Actions API for latest run, returns { status, conclusion, html_url } or null.
+GH.getLatestActionRun = async () => {
+  const url = `https://api.github.com/repos/${GH.owner}/${GH.repo}/actions/runs?per_page=1&t=${Date.now()}`;
+  const res = await fetch(url, { headers: GH.headers(), cache: "no-store" });
+  if (!res.ok) throw new Error(`getLatestActionRun failed: ${res.status}`);
+  const js = await res.json();
+  return js.workflow_runs && js.workflow_runs[0] ? js.workflow_runs[0] : null;
+};
+
 GH.setStatus = (state, msg = "") => {
   const el = document.getElementById("syncStatus");
   if (!el) return;

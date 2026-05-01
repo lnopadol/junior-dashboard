@@ -51,6 +51,8 @@ body {
 .btn.primary:hover { background: #333; }
 .btn.danger { color: var(--accent); border-color: var(--line); }
 .btn.danger:hover { background: var(--red-bg); border-color: var(--accent); }
+.btn:disabled { opacity: 0.6; cursor: not-allowed; }
+.btn[hidden] { display: none; }
 .btn.small { padding: 5px 10px; font-size: 12px; }
 
 /* Sync status */

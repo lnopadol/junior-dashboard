@@ -45,16 +45,19 @@ function fmtSourceList(sources) {
 // ---- Edit-mode plumbing ----
 function applyEditMode() {
   const banner = $("#readOnlyBanner");
+  const refreshBtn = $("#refreshBtn");
   if (GH.isSignedIn()) {
     document.body.classList.remove("readonly");
     $("#signInBtn").textContent = "Account";
     GH.setStatus("saved");
     if (banner) banner.hidden = true;
+    if (refreshBtn) refreshBtn.hidden = false;
   } else {
     document.body.classList.add("readonly");
     $("#signInBtn").textContent = "Sign in";
     GH.setStatus("signed-out");
     if (banner) banner.hidden = false;
+    if (refreshBtn) refreshBtn.hidden = true;
   }
   // Re-render to show/hide edit affordances
   renderActiveTab();
@@ -577,6 +580,67 @@ $("#confirmSignIn").onclick = async () => {
     GH.clearToken();
     $("#signInError").textContent = e.message;
     $("#signInError").hidden = false;
+  }
+};
+
+// ---- Refresh button ----
+let refreshPolling = false;
+$("#refreshBtn").onclick = async () => {
+  if (refreshPolling) return;
+  const btn = $("#refreshBtn");
+  if (!GH.isSignedIn()) return;
+  if (!confirm("Refresh prices and market numbers from Yahoo Finance? This will take ~30 seconds.")) return;
+
+  const originalText = btn.textContent;
+  refreshPolling = true;
+  btn.disabled = true;
+  btn.textContent = "⟳ Starting…";
+  try {
+    // Capture run id before triggering, so we can detect a new run started
+    const before = await GH.getLatestActionRun();
+    const beforeId = before ? before.id : 0;
+
+    await GH.triggerRefresh();
+    btn.textContent = "⟳ Refreshing…";
+
+    // Poll up to 3 minutes for a NEW run to complete
+    const deadline = Date.now() + 3 * 60 * 1000;
+    let lastStatus = "queued";
+    while (Date.now() < deadline) {
+      await new Promise(r => setTimeout(r, 5000));
+      const run = await GH.getLatestActionRun();
+      if (!run || run.id === beforeId) {
+        btn.textContent = "⟳ Queued…";
+        continue;
+      }
+      lastStatus = run.status;
+      if (run.status === "completed") {
+        if (run.conclusion === "success") {
+          btn.textContent = "✓ Refreshed";
+          GH.setStatus("saved", "Data refreshed");
+          // Reload data files (cache-busted) and re-render
+          await loadAll();
+          setTimeout(() => { btn.textContent = originalText; }, 3000);
+        } else {
+          btn.textContent = "⚠ Failed";
+          GH.setStatus("error", `Refresh ${run.conclusion}. Check Actions tab.`);
+          setTimeout(() => { btn.textContent = originalText; }, 5000);
+        }
+        return;
+      }
+      btn.textContent = run.status === "in_progress" ? "⟳ Running…" : `⟳ ${run.status}…`;
+    }
+    btn.textContent = "⚠ Timed out";
+    GH.setStatus("error", `Refresh still ${lastStatus} after 3 min. It may finish soon.`);
+    setTimeout(() => { btn.textContent = originalText; }, 5000);
+  } catch (e) {
+    console.error(e);
+    btn.textContent = "⚠ Error";
+    GH.setStatus("error", e.message);
+    setTimeout(() => { btn.textContent = originalText; }, 5000);
+  } finally {
+    refreshPolling = false;
+    btn.disabled = false;
   }
 };
 

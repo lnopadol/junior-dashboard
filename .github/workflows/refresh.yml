@@ -1,0 +1,41 @@
+name: Refresh dashboard data
+
+on:
+  # Triggered by the in-app "Refresh" button via repository_dispatch
+  repository_dispatch:
+    types: [refresh-dashboard]
+  # Manual run from the Actions tab
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Refresh data
+        run: python scripts/refresh.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "junior-dashboard-bot"
+          git config user.email "actions@github.com"
+          if [[ -n "$(git status --porcelain data/)" ]]; then
+            git add data/
+            git commit -m "chore: auto-refresh data ($(date -u +'%Y-%m-%d %H:%MZ'))"
+            git push
+          else
+            echo "No changes to commit"
+          fi
