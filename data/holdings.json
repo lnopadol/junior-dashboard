@@ -62,6 +62,20 @@
           "url": "https://www.nestle.com/investors/shares-adrs/dividends"
         }
       ]
+    },
+    {
+      "ticker": "ROG.SW",
+      "company": "",
+      "what_it_does": "",
+      "current_price": "",
+      "ytd_change_pct": "",
+      "1y_change_pct": "",
+      "dividend_yield_pct": "",
+      "why_own_it": [],
+      "one_thing_to_watch": "",
+      "this_week_status": "",
+      "verdict": "Healthy",
+      "sources": []
     }
   ]
 }
