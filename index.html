@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Investor Dashboard</title>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+<link rel="shortcut icon" href="assets/favicon.ico" />
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<link rel="stylesheet" href="styles.css?v=20260501-1" />
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <img src="assets/favicon-32.png" alt="" class="logo" />
+    <div>
+      <h1>Investor Dashboard</h1>
+      <p class="sub" id="subline">Loading…</p>
+    </div>
+  </div>
+  <div class="actions">
+    <span id="syncStatus" class="sync-status sync-signed-out">🔒 Read-only</span>
+    <button id="signInBtn" class="btn">Sign in</button>
+  </div>
+</header>
+
+<nav class="tabs" id="tabs">
+  <button class="tab active" data-tab="weekly">Weekly Update</button>
+  <button class="tab" data-tab="market">Market Update</button>
+  <button class="tab" data-tab="holdings">My Holdings</button>
+  <button class="tab" data-tab="watchlist">Stock Watch List</button>
+</nav>
+
+<main>
+  <div id="readOnlyBanner" class="readonly-banner" hidden>
+    <strong>Read-only on this device.</strong>
+    Edits won't save until you sign in. Tap <strong>Sign in</strong> and paste your Personal Access Token.
+  </div>
+
+  <!-- TAB: Weekly Update -->
+  <section class="pane active" data-pane="weekly" id="weeklyPane">
+    <div class="pane-loading">Loading…</div>
+  </section>
+
+  <!-- TAB: Market Update -->
+  <section class="pane" data-pane="market" id="marketPane">
+    <div class="pane-loading">Loading…</div>
+  </section>
+
+  <!-- TAB: My Holdings -->
+  <section class="pane" data-pane="holdings" id="holdingsPane">
+    <div class="pane-loading">Loading…</div>
+  </section>
+
+  <!-- TAB: Stock Watch List -->
+  <section class="pane" data-pane="watchlist" id="watchlistPane">
+    <div class="pane-loading">Loading…</div>
+  </section>
+</main>
+
+<!-- Detail modal (used by holdings + watchlist) -->
+<div class="modal" id="detailModal" hidden>
+  <div class="modal-card detail" id="detailContent"></div>
+</div>
+
+<!-- Add holding / watchlist modal -->
+<div class="modal" id="addModal" hidden>
+  <div class="modal-card" id="addContent"></div>
+</div>
+
+<!-- Sign-in modal -->
+<div class="modal" id="signInModal" hidden>
+  <div class="modal-card">
+    <h2>Sign in to GitHub</h2>
+    <p class="muted">Paste a <strong>Personal Access Token</strong> to enable auto-save. Your token is stored only in this browser and is sent only to <code>api.github.com</code>.</p>
+    <p class="muted" style="font-size:12px">
+      Create one at <a href="https://github.com/settings/tokens/new?scopes=repo&description=junior-dashboard" target="_blank" rel="noopener">github.com/settings/tokens/new</a>
+      with the <code>repo</code> scope (private repo), or a fine-grained token with <em>Contents: Read &amp; write</em> on <code>junior-dashboard</code>.
+    </p>
+    <input id="tokenInput" type="password" placeholder="ghp_… or github_pat_…" autocomplete="off" />
+    <div class="modal-actions">
+      <button class="btn danger" id="signOutBtn" hidden>Sign out</button>
+      <button class="btn" id="cancelSignIn">Cancel</button>
+      <button class="btn primary" id="confirmSignIn">Sign in</button>
+    </div>
+    <p id="signInError" class="sync-error-text" hidden></p>
+  </div>
+</div>
+
+<script src="github-sync.js?v=20260501-1"></script>
+<script src="app.js?v=20260501-1"></script>
+</body>
+</html>

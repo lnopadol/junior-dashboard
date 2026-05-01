@@ -1,0 +1,67 @@
+{
+  "as_of": "2026-05-01",
+  "holdings": [
+    {
+      "ticker": "GIVN.SW",
+      "company": "Givaudan SA",
+      "what_it_does": "Creates the flavours and fragrances used inside everyday food, drinks, perfumes, and beauty products — the company is the invisible ingredient behind many of the world's best-known brands.",
+      "current_price": "CHF 3,982 (last close 29 Apr 2026)",
+      "ytd_change_pct": "+0.9%",
+      "1y_change_pct": "-6.5%",
+      "dividend_yield_pct": "~1.8% (CHF 72.00 per share proposed for FY2025, 25th consecutive annual increase)",
+      "why_own_it": [
+        "Near-monopoly position: Givaudan and one rival control the majority of the global flavours and fragrances market, making it very hard for new competitors to take their place.",
+        "Sticky, repeat business: food and beverage companies rarely switch flavour suppliers because reformulating a product is costly and risky — so Givaudan keeps its customers for years.",
+        "25 years of unbroken dividend growth: the company has raised its dividend every single year since listing on the Swiss stock exchange in 2000, rewarding patient shareholders."
+      ],
+      "one_thing_to_watch": "A rising Swiss franc hurts Givaudan's reported revenues because most of its sales are earned in foreign currencies (euros, dollars, etc.) that shrink in value when converted back to francs.",
+      "this_week_status": "Gained about +2.8% this week (24–29 Apr 2026), recovering from April's tariff-related sell-off.",
+      "verdict": "Healthy",
+      "sources": [
+        {
+          "name": "Givaudan IR — 2025 Full Year Results",
+          "url": "https://www.givaudan.com/media/media-releases/2026/2025-full-year-results"
+        },
+        {
+          "name": "Reuters — Givaudan sales slowdown (Jan 2026)",
+          "url": "https://www.reuters.com/business/fragrance-maker-givaudan-slightly-lags-organic-growth-expectations-2025-2026-01-29/"
+        },
+        {
+          "name": "Givaudan — 2025 Investor Presentation",
+          "url": "https://www.givaudan.com/files/giv-2025-investor-presentation-jan.pdf"
+        }
+      ]
+    },
+    {
+      "ticker": "NESN.SW",
+      "company": "Nestlé SA",
+      "what_it_does": "The world's largest food and drink company, selling more than 30 household brands — including Nescafé, KitKat, Maggi, Nespresso, and Purina pet food — across 185 countries.",
+      "current_price": "CHF 87.74 (last close 29 Apr 2026)",
+      "ytd_change_pct": "+17.5%",
+      "1y_change_pct": "-4.3%",
+      "dividend_yield_pct": "~4.0% (TTM; ex-dividend date was 22 Apr 2026)",
+      "why_own_it": [
+        "People always need food: Nestlé sells everyday essentials that consumers buy even during recessions, making the share price generally less wild than riskier growth stocks.",
+        "Generous, reliable dividend: Nestlé has paid and grown its dividend for decades, offering an income stream of around 4% a year — above most savings accounts — while you hold the shares.",
+        "Global spread reduces risk: with sales in 185 countries and dozens of different product categories, a slowdown in one region or one brand is cushioned by the rest of the business."
+      ],
+      "one_thing_to_watch": "New CEO Philipp Navratil is cutting costs and restructuring — including 16,000 job reductions — which is promising long-term but could mean short-term earnings pressure and uncertainty while the turnaround plays out.",
+      "this_week_status": "Rose about +2.3% this week (24–29 Apr 2026), supported by better-than-expected Q1 2026 organic sales results reported on 24 Apr.",
+      "verdict": "Caution",
+      "sources": [
+        {
+          "name": "Reuters — Nestlé beats Q1 2026 sales estimates (Apr 2026)",
+          "url": "https://www.reuters.com/business/nestle-beats-first-quarter-organic-sales-estimates-2025-04-24/"
+        },
+        {
+          "name": "Reuters — Nestlé cuts are appetiser for bigger shake-up (Oct 2025)",
+          "url": "https://www.reuters.com/commentary/breakingviews/nestl-cuts-are-appetiser-bigger-shake-up-2025-10-16/"
+        },
+        {
+          "name": "Nestlé IR — Shareholder Dividends",
+          "url": "https://www.nestle.com/investors/shares-adrs/dividends"
+        }
+      ]
+    }
+  ]
+}
