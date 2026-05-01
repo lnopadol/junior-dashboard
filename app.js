@@ -570,6 +570,12 @@ $("#signOutBtn").onclick = () => {
 $("#confirmSignIn").onclick = async () => {
   const tok = $("#tokenInput").value.trim();
   if (!tok || tok.startsWith("•")) { $("#signInModal").hidden = true; return; }
+  const btn = $("#confirmSignIn");
+  const errEl = $("#signInError");
+  errEl.hidden = true;
+  errEl.textContent = "";
+  btn.disabled = true;
+  btn.textContent = "Verifying…";
   GH.setToken(tok);
   try {
     const user = await GH.verify();
@@ -577,9 +583,13 @@ $("#confirmSignIn").onclick = async () => {
     applyEditMode();
     GH.setStatus("saved", `Signed in as ${user.login}`);
   } catch (e) {
+    console.error("Sign-in failed:", e);
     GH.clearToken();
-    $("#signInError").textContent = e.message;
-    $("#signInError").hidden = false;
+    errEl.textContent = e.message || "Sign-in failed. Check the browser console for details.";
+    errEl.hidden = false;
+  } finally {
+    btn.disabled = false;
+    btn.textContent = "Sign in";
   }
 };
 

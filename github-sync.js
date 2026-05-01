@@ -28,17 +28,48 @@ GH.headers = () => ({
   "X-GitHub-Api-Version": "2022-11-28",
 });
 
-GH.verify = async () => {
-  const res = await fetch("https://api.github.com/user", { headers: GH.headers() });
-  if (!res.ok) throw new Error(`GitHub auth failed (${res.status}). Check your token.`);
-  const user = await res.json();
-  const repoRes = await fetch(`https://api.github.com/repos/${GH.owner}/${GH.repo}`, { headers: GH.headers() });
-  if (!repoRes.ok) throw new Error(`Cannot access ${GH.owner}/${GH.repo}. Token may lack repo scope.`);
-  const repoData = await repoRes.json();
-  if (!repoData.permissions || !repoData.permissions.push) {
-    throw new Error("Token has no write access. Use 'repo' scope (classic) or Contents:read-write (fine-grained).");
+// Fetch with a hard timeout so the UI never hangs forever on a stalled request.
+GH.fetchT = async (url, opts = {}, timeoutMs = 10000) => {
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), timeoutMs);
+  try {
+    return await fetch(url, { ...opts, signal: ctrl.signal });
+  } finally {
+    clearTimeout(timer);
   }
-  return user;
+};
+
+GH.verify = async () => {
+  console.log("[GH.verify] start");
+  let res;
+  try {
+    res = await GH.fetchT("https://api.github.com/repos/" + GH.owner + "/" + GH.repo, { headers: GH.headers() });
+  } catch (e) {
+    console.error("[GH.verify] network error", e);
+    throw new Error("Network error reaching GitHub. Check your internet connection.");
+  }
+  console.log("[GH.verify] repo status", res.status);
+  if (res.status === 401) throw new Error("Token is invalid or expired (401). Generate a new one.");
+  if (res.status === 403) throw new Error("Token rejected (403). Fine-grained tokens may need to be approved by the repo owner.");
+  if (res.status === 404) throw new Error("Repo not found (404). Token may not have access to lnopadol/junior-dashboard. For fine-grained tokens, make sure you selected this repo under 'Repository access'.");
+  if (!res.ok) throw new Error("GitHub error " + res.status + ". Check your token permissions.");
+  const repoData = await res.json();
+  // Fine-grained tokens with Contents:write set permissions.push:true. Same for classic 'repo' scope.
+  if (!repoData.permissions || !repoData.permissions.push) {
+    throw new Error("Token can read but not write. Add 'Contents: Read and write' (fine-grained) or 'repo' scope (classic).");
+  }
+  // Also need Actions:write for the Refresh button to dispatch workflows. Probe by trying a HEAD.
+  // (We don't fail sign-in on this — Refresh button will surface its own error if Actions perm is missing.)
+  let login = "unknown";
+  try {
+    const userRes = await GH.fetchT("https://api.github.com/user", { headers: GH.headers() });
+    if (userRes.ok) {
+      const u = await userRes.json();
+      login = u.login || "unknown";
+    }
+  } catch (_) { /* ignore — /user requires extra scope on fine-grained tokens */ }
+  console.log("[GH.verify] success, login=", login);
+  return { login };
 };
 
 GH.fromB64 = (b64) => {
