@@ -2,43 +2,43 @@
   "as_of": "2026-05-01",
   "market": {
     "macro": {
-      "headline_number": "US GDP Q1 2026: +2.0% annualized",
-      "takeaway": "The US economy bounced back strongly after a weak end to 2025, though rising inflation means the Fed is staying cautious with rates.",
+      "headline_number": "US GDP (Q1 2026, advance): +2.0% annualized",
+      "takeaway": "The U.S. economy is still growing, but not fast enough to make the Fed comfortable cutting rates quickly.",
       "source": {
-        "name": "US Bureau of Economic Analysis — GDP Advance Estimate Q1 2026",
-        "url": "https://www.bea.gov/data/gdp/gross-domestic-product"
+        "name": "U.S. Bureau of Economic Analysis (GDP advance estimate)",
+        "url": "https://www.bea.gov/news/2026/gdp-advance-estimate-1st-quarter-2026"
       }
     },
     "gold": {
-      "headline_number": "Gold: ~$4,644/oz (1y: +44.7%)",
-      "takeaway": "Gold is trading well above last year's levels as investors seek safety amid the Middle East conflict and a weaker US dollar.",
+      "headline_number": "Gold (front-month): $4,625.60/oz",
+      "takeaway": "Gold held near record-high levels even as markets priced in fewer near-term rate cuts.",
       "source": {
-        "name": "World Gold Council — Gold Demand Trends Q1 2026",
-        "url": "https://www.gold.org/goldhub/research/gold-demand-trends/gold-demand-trends-q1-2026"
+        "name": "Realtime Finance Data (GC=F quote)",
+        "url": "https://www.perplexity.ai/finance/"
       }
     },
     "china": {
-      "headline_number": "CSI 300 Index: 4,807 (30 Apr 2026); 1y: +27.5%",
-      "takeaway": "China's economy grew faster than expected on strong exports, but Chinese stocks closed for the May Day holiday with markets watching energy costs.",
+      "headline_number": "CSI 300 proxy (ASHR): $35.40",
+      "takeaway": "China data looked soft (services PMI 49.4), and A-shares are closed May 1–5 for Labour Day so this uses the US-listed CSI 300 ETF proxy.",
       "source": {
-        "name": "CNBC — China GDP growth Q1 2026",
-        "url": "https://www.cnbc.com/2026/04/16/china-gdp-growth-first-quarter-exports-property-retail-sales-iran-war.html"
+        "name": "China non-manufacturing PMI (official release)",
+        "url": "https://english.www.gov.cn/archive/statistics/202604/30/content_WS69f30963c6d00ca5f9a0ab93.html"
       }
     },
     "thailand": {
-      "headline_number": "SET Index: 1,493.69 (30 Apr 2026); 1y: +24.6%",
-      "takeaway": "Thailand's stock market held steady near recent highs as the central bank kept rates at 1%, supported by strong tourism recovery.",
+      "headline_number": "SET Index: 1,493.69",
+      "takeaway": "Thailand’s policy rate is still 1.00%, so the BoT is staying supportive even as inflation picks up.",
       "source": {
-        "name": "Stock Exchange of Thailand — SET Index Overview",
-        "url": "https://www.set.or.th/en/market/index/set/overview"
+        "name": "Bank of Thailand MPC decision",
+        "url": "https://www.bot.or.th/en/news-and-media/news/mpc/news-20260429-dw49y0B5.html"
       }
     },
     "us": {
-      "headline_number": "S&P 500: 7,257 (01 May 2026); YTD: +5.8%",
-      "takeaway": "US stocks closed at a new record as strong Big Tech earnings overcame Fed uncertainty, but high inflation means rate cuts are not coming soon.",
+      "headline_number": "S&P 500: 7,229.32",
+      "takeaway": "Stocks finished the week near record highs while the Fed kept rates at 3.5%–3.75%.",
       "source": {
-        "name": "CNBC — Fed holds rates steady, most divided vote since 1992",
-        "url": "https://www.cnbc.com/2026/04/29/fed-interest-rate-decision-april-2026.html"
+        "name": "Federal Reserve FOMC statement",
+        "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260429a.htm"
       }
     }
   }
