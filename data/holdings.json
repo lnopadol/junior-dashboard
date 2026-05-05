@@ -76,6 +76,20 @@
       "this_week_status": "Fell about -1.7% over the past week (close 04 May 2026).",
       "verdict": "Healthy",
       "sources": []
+    },
+    {
+      "ticker": "KFCHINA-T10PLUS-A",
+      "company": "",
+      "what_it_does": "",
+      "current_price": "",
+      "ytd_change_pct": "",
+      "1y_change_pct": "",
+      "dividend_yield_pct": "",
+      "why_own_it": [],
+      "one_thing_to_watch": "",
+      "this_week_status": "",
+      "verdict": "Healthy",
+      "sources": []
     }
   ]
 }
