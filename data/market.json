@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-05-01",
+  "as_of": "2026-05-05",
   "market": {
     "macro": {
       "headline_number": "US GDP (Q1 2026, advance): +2.0% annualized",
@@ -10,7 +10,7 @@
       }
     },
     "gold": {
-      "headline_number": "Gold (front-month): $4,625.60/oz",
+      "headline_number": "Gold: ~$4,545/oz (1y: +37.2%)",
       "takeaway": "Gold held near record-high levels even as markets priced in fewer near-term rate cuts.",
       "source": {
         "name": "Realtime Finance Data (GC=F quote)",
@@ -18,7 +18,7 @@
       }
     },
     "china": {
-      "headline_number": "CSI 300 proxy (ASHR): $35.40",
+      "headline_number": "CSI 300 Index: 4,807 (30 Apr 2026); 1y: +27.5%",
       "takeaway": "China data looked soft (services PMI 49.4), and A-shares are closed May 1–5 for Labour Day so this uses the US-listed CSI 300 ETF proxy.",
       "source": {
         "name": "China non-manufacturing PMI (official release)",
@@ -26,7 +26,7 @@
       }
     },
     "thailand": {
-      "headline_number": "SET Index: 1,493.69",
+      "headline_number": "SET Index: 1,486.99 (05 May 2026); 1y: +25.2%",
       "takeaway": "Thailand’s policy rate is still 1.00%, so the BoT is staying supportive even as inflation picks up.",
       "source": {
         "name": "Bank of Thailand MPC decision",
@@ -34,7 +34,7 @@
       }
     },
     "us": {
-      "headline_number": "S&P 500: 7,229.32",
+      "headline_number": "S&P 500: 7,201 (04 May 2026); YTD: +5.0%",
       "takeaway": "Stocks finished the week near record highs while the Fed kept rates at 3.5%–3.75%.",
       "source": {
         "name": "Federal Reserve FOMC statement",

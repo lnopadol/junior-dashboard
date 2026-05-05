@@ -1,13 +1,13 @@
 {
-  "as_of": "2026-05-01",
+  "as_of": "2026-05-05",
   "holdings": [
     {
       "ticker": "GIVN.SW",
       "company": "Givaudan SA",
       "what_it_does": "Creates the flavours and fragrances used inside everyday food, drinks, perfumes, and beauty products — the company is the invisible ingredient behind many of the world's best-known brands.",
-      "current_price": "CHF 2,785 (last close 30 Apr 2026)",
-      "ytd_change_pct": "-10.3%",
-      "1y_change_pct": "-30.1%",
+      "current_price": "CHF 2,762 (last close 04 May 2026)",
+      "ytd_change_pct": "-11.1%",
+      "1y_change_pct": "-31.5%",
       "dividend_yield_pct": "~1.8% (CHF 72.00 per share proposed for FY2025, 25th consecutive annual increase)",
       "why_own_it": [
         "Near-monopoly position: Givaudan and one rival control the majority of the global flavours and fragrances market, making it very hard for new competitors to take their place.",
@@ -15,7 +15,7 @@
         "25 years of unbroken dividend growth: the company has raised its dividend every single year since listing on the Swiss stock exchange in 2000, rewarding patient shareholders."
       ],
       "one_thing_to_watch": "A rising Swiss franc hurts Givaudan's reported revenues because most of its sales are earned in foreign currencies (euros, dollars, etc.) that shrink in value when converted back to francs.",
-      "this_week_status": "Fell about -1.3% over the past week (close 30 Apr 2026).",
+      "this_week_status": "Fell about -1.8% over the past week (close 04 May 2026).",
       "verdict": "Healthy",
       "sources": [
         {
@@ -36,9 +36,9 @@
       "ticker": "NESN.SW",
       "company": "Nestlé SA",
       "what_it_does": "The world's largest food and drink company, selling more than 30 household brands — including Nescafé, KitKat, Maggi, Nespresso, and Purina pet food — across 185 countries.",
-      "current_price": "CHF 79.05 (last close 30 Apr 2026)",
-      "ytd_change_pct": "+3.4%",
-      "1y_change_pct": "-9.9%",
+      "current_price": "CHF 78.17 (last close 04 May 2026)",
+      "ytd_change_pct": "+2.3%",
+      "1y_change_pct": "-10.5%",
       "dividend_yield_pct": "~4.0% (TTM; ex-dividend date was 22 Apr 2026)",
       "why_own_it": [
         "People always need food: Nestlé sells everyday essentials that consumers buy even during recessions, making the share price generally less wild than riskier growth stocks.",
@@ -46,7 +46,7 @@
         "Global spread reduces risk: with sales in 185 countries and dozens of different product categories, a slowdown in one region or one brand is cushioned by the rest of the business."
       ],
       "one_thing_to_watch": "New CEO Philipp Navratil is cutting costs and restructuring — including 16,000 job reductions — which is promising long-term but could mean short-term earnings pressure and uncertainty while the turnaround plays out.",
-      "this_week_status": "Fell about -1.2% over the past week (close 30 Apr 2026).",
+      "this_week_status": "Fell about -3.7% over the past week (close 04 May 2026).",
       "verdict": "Caution",
       "sources": [
         {
@@ -67,13 +67,13 @@
       "ticker": "ROG.SW",
       "company": "",
       "what_it_does": "",
-      "current_price": "CHF 318.40 (last close 30 Apr 2026)",
-      "ytd_change_pct": "-2.2%",
-      "1y_change_pct": "+18.2%",
+      "current_price": "CHF 316.50 (last close 04 May 2026)",
+      "ytd_change_pct": "-2.8%",
+      "1y_change_pct": "+16.4%",
       "dividend_yield_pct": "",
       "why_own_it": [],
       "one_thing_to_watch": "",
-      "this_week_status": "Fell about -2.0% over the past week (close 30 Apr 2026).",
+      "this_week_status": "Fell about -1.7% over the past week (close 04 May 2026).",
       "verdict": "Healthy",
       "sources": []
     }
