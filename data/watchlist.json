@@ -1,4 +1,15 @@
 {
   "as_of": "2026-05-05",
-  "stocks": []
+  "stocks": [
+    {
+      "ticker": "KFCHINA-T10PLUS-A KFCHINA-T10PLUS-A",
+      "company": "",
+      "what_it_does": "",
+      "price": "",
+      "verdict": "Wait",
+      "why": "",
+      "key_risk": "",
+      "sources": []
+    }
+  ]
 }
