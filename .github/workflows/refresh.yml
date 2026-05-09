@@ -26,6 +26,8 @@ jobs:
         run: pip install requests
 
       - name: Refresh data
+        env:
+          PPLX_API_KEY: ${{ secrets.PPLX_API_KEY }}
         run: python scripts/refresh.py
 
       - name: Commit and push if changed
