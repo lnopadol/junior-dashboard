@@ -1,15 +1,28 @@
 {
-  "as_of": "2026-05-05",
+  "as_of": "2026-05-09",
   "stocks": [
     {
-      "ticker": "KFCHINA-T10PLUS-A KFCHINA-T10PLUS-A",
-      "company": "",
-      "what_it_does": "",
-      "price": "",
+      "ticker": "KFCHINA-T10PLUS-A",
+      "company": "Krungsri China Tech 10 Plus Fund-A (KFCHINA-T10PLUS-A)",
+      "what_it_does": "A mutual fund that invests in 10-15 leading Chinese technology companies listed on the Hong Kong Stock Exchange, with equal weighting and quarterly rebalancing.",
+      "price": "7.74 THB (as of April 30, 2026)",
       "verdict": "Wait",
-      "why": "",
-      "key_risk": "",
-      "sources": []
+      "why": "The fund is relatively new (inception July 2025) with limited performance history to evaluate, and Chinese tech stocks face regulatory and geopolitical uncertainties. A beginner investor should wait for at least 12 months of track record and clearer market conditions before committing.",
+      "key_risk": "Concentrated exposure to Chinese technology sector combined with Hong Kong currency risk and discretionary currency hedging creates significant volatility and regulatory risk.",
+      "sources": [
+        {
+          "name": "Krungsri Asset Management - Fund Detail",
+          "url": "https://www.krungsriasset.com/EN/FundDetail/?fund=KFCHINA-T10PLUS-A"
+        },
+        {
+          "name": "SET Trade - Fund Overview",
+          "url": "https://www.settrade.com/th/mutualfund/quote/KFCHINA-T10PLUS-A/overview"
+        },
+        {
+          "name": "Krungsri Asset Management - Fund Launch",
+          "url": "https://www.krungsriasset.com/EN/news/news-notice/Release_KFCHINA-T10PLUS/"
+        }
+      ]
     }
   ]
 }

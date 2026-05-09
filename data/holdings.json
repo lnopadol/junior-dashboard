@@ -1,95 +1,126 @@
 {
-  "as_of": "2026-05-05",
+  "as_of": "2026-05-09",
   "holdings": [
     {
       "ticker": "GIVN.SW",
       "company": "Givaudan SA",
-      "what_it_does": "Creates the flavours and fragrances used inside everyday food, drinks, perfumes, and beauty products — the company is the invisible ingredient behind many of the world's best-known brands.",
-      "current_price": "CHF 2,762 (last close 04 May 2026)",
-      "ytd_change_pct": "-11.1%",
-      "1y_change_pct": "-31.5%",
-      "dividend_yield_pct": "~1.8% (CHF 72.00 per share proposed for FY2025, 25th consecutive annual increase)",
+      "what_it_does": "Givaudan creates and manufactures flavors and fragrances for consumer products like perfumes, beverages, snacks, and personal care items worldwide.",
+      "current_price": "CHF 2,779 (last close 08 May 2026)",
+      "ytd_change_pct": "-10.5%",
+      "1y_change_pct": "-30.5%",
+      "dividend_yield_pct": "~2.21% (TTM)",
       "why_own_it": [
-        "Near-monopoly position: Givaudan and one rival control the majority of the global flavours and fragrances market, making it very hard for new competitors to take their place.",
-        "Sticky, repeat business: food and beverage companies rarely switch flavour suppliers because reformulating a product is costly and risky — so Givaudan keeps its customers for years.",
-        "25 years of unbroken dividend growth: the company has raised its dividend every single year since listing on the Swiss stock exchange in 2000, rewarding patient shareholders."
+        "It leads the global flavors and fragrances market with a strong brand and presence in over 80 countries serving major consumer brands.",
+        "The company has a history of steady growth and reliable dividends, making it suitable for long-term holding.",
+        "Its diverse customer base across beverages, snacks, and beauty products provides stability against economic ups and downs."
       ],
-      "one_thing_to_watch": "A rising Swiss franc hurts Givaudan's reported revenues because most of its sales are earned in foreign currencies (euros, dollars, etc.) that shrink in value when converted back to francs.",
-      "this_week_status": "Fell about -1.8% over the past week (close 04 May 2026).",
+      "one_thing_to_watch": "Monitor rising debt levels and payout ratios, as they could limit future dividend growth and financial flexibility.",
+      "this_week_status": "The stock traded in a narrow range of CHF 3,126–3,166, closing at CHF 3,133 after a slight decline from CHF 3,162, with low volume of 15,389 shares and no major news reported.",
       "verdict": "Healthy",
       "sources": [
         {
-          "name": "Givaudan IR — 2025 Full Year Results",
-          "url": "https://www.givaudan.com/media/media-releases/2026/2025-full-year-results"
+          "name": "Givaudan Investor Relations",
+          "url": "https://www.givaudan.com/investors/investor-information/share-price"
         },
         {
-          "name": "Reuters — Givaudan sales slowdown (Jan 2026)",
-          "url": "https://www.reuters.com/business/fragrance-maker-givaudan-slightly-lags-organic-growth-expectations-2025-2026-01-29/"
-        },
-        {
-          "name": "Givaudan — 2025 Investor Presentation",
-          "url": "https://www.givaudan.com/files/giv-2025-investor-presentation-jan.pdf"
+          "name": "SIX Swiss Exchange via Morningstar",
+          "url": "https://www.morningstar.com/stocks/xswx/givn/quote"
         }
       ]
     },
     {
       "ticker": "NESN.SW",
-      "company": "Nestlé SA",
-      "what_it_does": "The world's largest food and drink company, selling more than 30 household brands — including Nescafé, KitKat, Maggi, Nespresso, and Purina pet food — across 185 countries.",
-      "current_price": "CHF 78.17 (last close 04 May 2026)",
-      "ytd_change_pct": "+2.3%",
-      "1y_change_pct": "-10.5%",
-      "dividend_yield_pct": "~4.0% (TTM; ex-dividend date was 22 Apr 2026)",
+      "company": "Nestlé S.A.",
+      "what_it_does": "Nestlé is the world's largest food and beverage manufacturer, producing packaged foods, coffee, pet care, and nutrition products across 185 countries.",
+      "current_price": "CHF 77.47 (last close 08 May 2026)",
+      "ytd_change_pct": "+1.3%",
+      "1y_change_pct": "-11.0%",
+      "dividend_yield_pct": "~4.0% (TTM)",
       "why_own_it": [
-        "People always need food: Nestlé sells everyday essentials that consumers buy even during recessions, making the share price generally less wild than riskier growth stocks.",
-        "Generous, reliable dividend: Nestlé has paid and grown its dividend for decades, offering an income stream of around 4% a year — above most savings accounts — while you hold the shares.",
-        "Global spread reduces risk: with sales in 185 countries and dozens of different product categories, a slowdown in one region or one brand is cushioned by the rest of the business."
+        "Nestlé has 150+ years of history and a diversified portfolio of 30+ billion-franc brands (Nescafé, Maggi, Nespresso, Purina) that generate stable, recurring revenue.",
+        "The company pays a reliable dividend yield of approximately 4% annually, making it attractive for long-term income-focused investors.",
+        "As a large-cap defensive consumer staple in a developed market, Nestlé provides portfolio stability and lower volatility compared to growth stocks."
       ],
-      "one_thing_to_watch": "New CEO Philipp Navratil is cutting costs and restructuring — including 16,000 job reductions — which is promising long-term but could mean short-term earnings pressure and uncertainty while the turnaround plays out.",
-      "this_week_status": "Fell about -3.7% over the past week (close 04 May 2026).",
-      "verdict": "Caution",
+      "one_thing_to_watch": "Monitor commodity price inflation and currency fluctuations, as Nestlé's global supply chain and multi-currency revenues expose it to cost pressures and exchange-rate headwinds.",
+      "this_week_status": "NESN traded near CHF 75.86–76.93 this week with modest downward pressure (-0.77% to -1.00%), reflecting typical market consolidation in a mature large-cap defensive stock.",
+      "verdict": "Healthy",
       "sources": [
         {
-          "name": "Reuters — Nestlé beats Q1 2026 sales estimates (Apr 2026)",
-          "url": "https://www.reuters.com/business/nestle-beats-first-quarter-organic-sales-estimates-2025-04-24/"
+          "name": "SIX Swiss Exchange",
+          "url": "https://www.six-group.com/en/market-data/shares/share-explorer/share-details.CH0038863350CHF4.html"
         },
         {
-          "name": "Reuters — Nestlé cuts are appetiser for bigger shake-up (Oct 2025)",
-          "url": "https://www.reuters.com/commentary/breakingviews/nestl-cuts-are-appetiser-bigger-shake-up-2025-10-16/"
+          "name": "Morningstar",
+          "url": "https://www.morningstar.com/stocks/xswx/nesn/quote"
         },
         {
-          "name": "Nestlé IR — Shareholder Dividends",
-          "url": "https://www.nestle.com/investors/shares-adrs/dividends"
+          "name": "Nestlé Investor Relations",
+          "url": "https://www.nestle.com"
         }
       ]
     },
     {
       "ticker": "ROG.SW",
-      "company": "",
-      "what_it_does": "",
-      "current_price": "CHF 316.50 (last close 04 May 2026)",
-      "ytd_change_pct": "-2.8%",
-      "1y_change_pct": "+16.4%",
-      "dividend_yield_pct": "",
-      "why_own_it": [],
-      "one_thing_to_watch": "",
-      "this_week_status": "Fell about -1.7% over the past week (close 04 May 2026).",
+      "company": "Roche Holding AG",
+      "what_it_does": "Roche Holding AG is a Swiss multinational healthcare company that develops and markets pharmaceuticals and diagnostic products.",
+      "current_price": "CHF 315.30 (last close 08 May 2026)",
+      "ytd_change_pct": "-3.1%",
+      "1y_change_pct": "+21.3%",
+      "dividend_yield_pct": "~3.0% (forward as of May 2026)",
+      "why_own_it": [
+        "It is a global leader in oncology and diagnostics with a strong pipeline of innovative medicines.",
+        "The company generates stable cash flows from a diversified portfolio of essential healthcare products.",
+        "It offers a reliable dividend with a history of growth, appealing for long-term income.",
+        ""
+      ],
+      "one_thing_to_watch": "Monitor regulatory approvals and patent expirations for key drugs, as delays or losses could impact revenue growth.",
+      "this_week_status": "Price closed at 322.3 CHF on Mar 16 with a 0.5% gain; no major news reported this week.",
       "verdict": "Healthy",
-      "sources": []
+      "sources": [
+        {
+          "name": "Roche Investors",
+          "url": "https://www.roche.com/investors/bonds"
+        },
+        {
+          "name": "SIX Swiss Exchange via BigGo Finance",
+          "url": "https://finance.biggo.com/quote/ROG.SW"
+        },
+        {
+          "name": "Digrin",
+          "url": "https://www.digrin.com/stocks/detail/ROG.SW/"
+        }
+      ]
     },
     {
       "ticker": "KFCHINA-T10PLUS-A",
-      "company": "",
-      "what_it_does": "",
-      "current_price": "",
+      "company": "Krungsri China Tech 10 Plus Fund-A (KFCHINA-T10PLUS-A)",
+      "what_it_does": "This Thai mutual fund invests in 10-15 leading Chinese technology stocks listed on the Hong Kong Stock Exchange, focusing on companies from the Hang Seng TECH Index using a rule-based strategy.",
+      "current_price": "THB 7.4513 (NAV 30 Apr 2026)",
       "ytd_change_pct": "",
       "1y_change_pct": "",
-      "dividend_yield_pct": "",
-      "why_own_it": [],
-      "one_thing_to_watch": "",
-      "this_week_status": "",
-      "verdict": "Healthy",
-      "sources": []
+      "dividend_yield_pct": "N/A (no dividend)",
+      "why_own_it": [
+        "It provides targeted exposure to high-growth Chinese tech leaders like those in e-commerce and delivery at potentially attractive valuations.",
+        "The concentrated portfolio of 10-15 equal-weighted stocks aims to outperform the broader Hang Seng TECH Index over the long term.",
+        "Managed by Krungsri with a systematic rule-based approach, it reduces emotional decision-making for long-term holding."
+      ],
+      "one_thing_to_watch": "Monitor geopolitical tensions and Chinese regulatory actions on tech firms, as they can cause sharp volatility in Hong Kong-listed stocks.",
+      "this_week_status": "No specific this-week price action available; latest NAV 7.4513 THB as of 30 April 2026 showed strong 1-year return of +32.15%, reflecting tech recovery momentum.",
+      "verdict": "Caution",
+      "sources": [
+        {
+          "name": "Krungsri Asset Management",
+          "url": "https://www.krungsriasset.com/EN/FundDetail/?fund=KFCHINA-T10PLUS-A"
+        },
+        {
+          "name": "Krungsri Asset Management News",
+          "url": "https://www.krungsriasset.com/EN/news/news-notice/Release_KFCHINA-T10PLUS/"
+        },
+        {
+          "name": "SETTRADE",
+          "url": "https://www.settrade.com/th/mutualfund/quote/KFCHINA-T10PLUS-A/overview"
+        }
+      ]
     }
   ]
 }
