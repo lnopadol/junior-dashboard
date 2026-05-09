@@ -4,23 +4,23 @@
     {
       "ticker": "KFCHINA-T10PLUS-A",
       "company": "Krungsri China Tech 10 Plus Fund-A (KFCHINA-T10PLUS-A)",
-      "what_it_does": "A mutual fund that invests in 10-15 leading Chinese technology companies listed on the Hong Kong Stock Exchange, with equal weighting and quarterly rebalancing.",
-      "price": "7.74 THB (as of April 30, 2026)",
+      "what_it_does": "This is a Thai mutual fund that invests in 10 to 15 high-liquidity technology stocks listed on the Hong Kong Stock Exchange, focusing on companies in the Hang Seng TECH Index or similar large-cap tech firms, using a rules-based strategy to outperform its benchmark.",
+      "price": "THB N/A (NAV as of Feb 27, 2026; no current quote available)",
       "verdict": "Wait",
-      "why": "The fund is relatively new (inception July 2025) with limited performance history to evaluate, and Chinese tech stocks face regulatory and geopolitical uncertainties. A beginner investor should wait for at least 12 months of track record and clearer market conditions before committing.",
-      "key_risk": "Concentrated exposure to Chinese technology sector combined with Hong Kong currency risk and discretionary currency hedging creates significant volatility and regulatory risk.",
+      "why": "The fund targets concentrated exposure to Chinese tech stocks, which have shown strong historical benchmark returns (e.g., Hang Seng TECH 1-year 37.47% as of late 2025), but lacks current 2026 performance data and operates in a volatile sector amid ongoing US-China tensions and regulatory risks. Beginners should wait for updated NAV and market stability before entering.",
+      "key_risk": "High concentration in 10-15 Chinese tech stocks exposes the fund to sector-specific downturns from regulatory crackdowns or geopolitical events.",
       "sources": [
         {
-          "name": "Krungsri Asset Management - Fund Detail",
+          "name": "Krungsri Asset Management",
           "url": "https://www.krungsriasset.com/EN/FundDetail/?fund=KFCHINA-T10PLUS-A"
         },
         {
-          "name": "SET Trade - Fund Overview",
-          "url": "https://www.settrade.com/th/mutualfund/quote/KFCHINA-T10PLUS-A/overview"
+          "name": "Krungsri Fund Factsheet PDF",
+          "url": "https://www.krungsriasset.com/DataWeb/AYFWeb/en/pdf/FFS_KFCHINA-T10PLUS-I_EN.pdf"
         },
         {
-          "name": "Krungsri Asset Management - Fund Launch",
-          "url": "https://www.krungsriasset.com/EN/news/news-notice/Release_KFCHINA-T10PLUS/"
+          "name": "Krungsri Fund Presentation PDF",
+          "url": "https://www.krungsriasset.com/DataWeb/AYFWeb/en/pdf/KFCHINA-T10PLUS_Presentation_EN.pdf?rnd=20250727020222"
         }
       ]
     }
