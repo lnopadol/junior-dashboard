@@ -99,6 +99,44 @@ def fmt_pct(pct):
 
 
 # ============================================================
+# Source whitelist (filters out aggregators / blogs the model loves to cite)
+# ============================================================
+
+SOURCE_WHITELIST_DOMAINS = (
+    # Official IR / company
+    "roche.com", "nestle.com", "givaudan.com", "novartis.com",
+    # News
+    "reuters.com", "bloomberg.com", "ft.com", "wsj.com", "cnbc.com",
+    "marketwatch.com", "economist.com", "barrons.com",
+    # Exchanges / regulators
+    "sec.gov", "six-group.com", "set.or.th", "hkex.com.hk",
+    "federalreserve.gov", "bea.gov", "bls.gov", "bot.or.th",
+    "gold.org",
+    # Thai fund providers
+    "krungsriasset.com", "settrade.com", "efinancethai.com",
+    "kasikornassetmanagement.com", "scbam.com", "uobam.co.th",
+)
+
+BLACKLIST_HINTS = ("digrin", "biggo", "seekingalpha", "reddit", "medium.com",
+                   "investing.com", "yahoo.com", "benzinga", "motleyfool",
+                   "stockanalysis", "fool.com")
+
+
+def filter_sources(sources):
+    """Keep only whitelisted, drop empty/blacklisted. Returns at most 3."""
+    out = []
+    for src in sources or []:
+        if not isinstance(src, dict): continue
+        url = (src.get("url") or "").lower().strip()
+        name = (src.get("name") or "").strip()
+        if not url or not name: continue
+        if any(bad in url for bad in BLACKLIST_HINTS): continue
+        if any(good in url for good in SOURCE_WHITELIST_DOMAINS):
+            out.append({"name": src["name"], "url": src["url"]})
+    return out[:3]
+
+
+# ============================================================
 # Perplexity API (editorial research)
 # ============================================================
 
@@ -149,46 +187,48 @@ def pplx_research(prompt: str, max_retries: int = 2) -> dict:
             raise
 
 
-def research_holding(ticker: str, company_hint: str, needs_price: bool):
+def research_holding(ticker: str, company_hint: str, needs_price: bool, today_iso: str):
     """Returns dict with editorial fields (and price string if needs_price)."""
     price_clause = (
-        " 'current_price' (string, today's NAV or close price with currency, e.g. 'THB 12.34 (NAV 8 May 2026)' or 'CHF 87.74 (close 8 May 2026)'),"
+        " 'current_price' (string, today's NAV or close price with currency, e.g. 'THB 12.34 (NAV 8 May 2026)'),\n  - 'ytd_change_pct' (string like '+5.2%' or '-1.0%' or 'N/A')\n  - '1y_change_pct' (string like '+12.0%' or 'N/A')"
         if needs_price else ""
     )
-    prompt = f"""Research the security with ticker "{ticker}" (hint: company/fund name "{company_hint}") for a beginner long-term investor.
+    prompt = f"""Research the security with ticker "{ticker}" (hint: company/fund name "{company_hint}") for a beginner long-term investor. Today is {today_iso}.
 
 Return ONE JSON object with EXACTLY these fields:
 - "company": string, official company or fund name
 - "what_it_does": string, one sentence in plain English explaining what the company/fund does
-- "why_own_it": array of EXACTLY 3 strings, each a single beginner-friendly sentence explaining why a long-term investor would hold this
+- "why_own_it": ARRAY OF EXACTLY 3 STRINGS — no more, no fewer, no empty strings. Each is a single beginner-friendly sentence explaining why a long-term investor would hold this.
 - "one_thing_to_watch": string, one sentence about the single biggest risk to monitor
 - "dividend_yield_pct": string like "~3.5% (TTM)" or "N/A (no dividend)" or "~1.8% (FY2025 proposed)"
-- "verdict": one of EXACTLY "Healthy", "Caution", or "Concern" — Healthy = solid fundamentals + reasonable price, Caution = mixed signals, Concern = worrying issues
-- "this_week_status": string, one sentence on this week's price action and any news driving it{price_clause}
-- "sources": array of 2-3 objects, each {{"name": "publication or company", "url": "https://..."}}
+- "verdict": one of EXACTLY "Healthy", "Caution", or "Concern"
+- "this_week_status": string, one sentence on the most recent week's price action and any news driving it. Use the actual current week ending {today_iso}, NOT past months.{price_clause}
+- "sources": array of 2-3 objects {{"name", "url"}}. SOURCES MUST BE FROM THIS WHITELIST ONLY: official company IR pages (e.g. roche.com/investors, nestle.com/investors), Reuters (reuters.com), Bloomberg (bloomberg.com), Financial Times (ft.com), Wall Street Journal (wsj.com), CNBC (cnbc.com), official exchanges (six-group.com, set.or.th, krungsriasset.com for Thai funds, settrade.com). NEVER use Digrin, BigGo, Seeking Alpha, blogs, Reddit, or aggregator sites.
 
-Use ONLY reputable sources. The ticker "{ticker}" may be a Thai mutual fund (Krungsri, K Plus, SCB, etc.) — if so, find NAV from the AMC's official Thai site or efinanceThai. Output JSON only, no prose."""
+The ticker "{ticker}" may be a Thai mutual fund (Krungsri, K Plus, SCB, etc.) — if so, find NAV from krungsriasset.com or settrade.com.
+
+Output a single valid JSON object. No markdown, no prose, no code fences."""
 
     print(f"  [pplx] researching {ticker}...")
     return pplx_research(prompt)
 
 
-def research_watchlist(ticker: str, company_hint: str, needs_price: bool):
+def research_watchlist(ticker: str, company_hint: str, needs_price: bool, today_iso: str):
     price_clause = (
-        " 'price' (string, today's quote/NAV with currency),"
+        " 'price' (string, today's quote/NAV with currency, e.g. 'THB 7.45 (NAV 8 May 2026)'),"
         if needs_price else ""
     )
-    prompt = f"""Research the security with ticker "{ticker}" (hint: "{company_hint}") for a beginner investor deciding whether to BUY, WAIT, or IGNORE.
+    prompt = f"""Research the security with ticker "{ticker}" (hint: "{company_hint}") for a beginner investor deciding whether to BUY, WAIT, or IGNORE. Today is {today_iso}.
 
 Return ONE JSON object with EXACTLY these fields:
 - "company": string
-- "what_it_does": string, one sentence
-- "verdict": one of "Buy", "Wait", or "Ignore" — Buy = attractive entry now, Wait = good company but wait for better price/clarity, Ignore = not suitable
+- "what_it_does": string, one sentence in plain English
+- "verdict": one of EXACTLY "Buy", "Wait", or "Ignore"
 - "why": string, one to two sentences justifying the verdict
 - "key_risk": string, one sentence on the single biggest risk{price_clause}
-- "sources": array of 2-3 {{"name", "url"}} from reputable sources only
+- "sources": array of 2-3 {{"name", "url"}}. SOURCES MUST BE FROM: official company IR, Reuters, Bloomberg, FT, WSJ, CNBC, official exchanges (set.or.th, six-group.com), Thai AMC sites (krungsriasset.com, settrade.com). NEVER use Digrin, BigGo, Seeking Alpha, blogs, or aggregators.
 
-Output JSON only."""
+Output a single valid JSON object. No markdown, no prose, no code fences."""
 
     print(f"  [pplx] researching watchlist {ticker}...")
     return pplx_research(prompt)
@@ -228,7 +268,7 @@ def refresh_holdings(today_iso: str):
 
         # 2) Always run editorial research (always-fresh per user request)
         try:
-            ed = research_holding(ticker, company_hint, needs_price=not yahoo_ok)
+            ed = research_holding(ticker, company_hint, needs_price=not yahoo_ok, today_iso=today_iso)
         except Exception as e:
             print(f"  ! Perplexity research failed for {ticker}: {e}", file=sys.stderr)
             continue
@@ -236,20 +276,24 @@ def refresh_holdings(today_iso: str):
         # Apply editorial fields, preserving anything we already wrote from Yahoo
         if ed.get("company"): h["company"] = ed["company"]
         if ed.get("what_it_does"): h["what_it_does"] = ed["what_it_does"]
-        if ed.get("why_own_it"): h["why_own_it"] = ed["why_own_it"]
+        # Sanitize why_own_it: drop empties, cap at 3
+        if ed.get("why_own_it"):
+            cleaned = [str(x).strip() for x in ed["why_own_it"] if str(x).strip()]
+            h["why_own_it"] = cleaned[:3]
         if ed.get("one_thing_to_watch"): h["one_thing_to_watch"] = ed["one_thing_to_watch"]
         if ed.get("dividend_yield_pct"): h["dividend_yield_pct"] = ed["dividend_yield_pct"]
         if ed.get("verdict") in ("Healthy", "Caution", "Concern"):
             h["verdict"] = ed["verdict"]
-        if ed.get("sources"): h["sources"] = ed["sources"]
+        # Filter out non-whitelisted sources
+        if ed.get("sources"):
+            h["sources"] = filter_sources(ed["sources"])
         # Price/this_week_status from AI ONLY if Yahoo couldn't provide it
         if not yahoo_ok:
             if ed.get("current_price"): h["current_price"] = ed["current_price"]
+            if ed.get("ytd_change_pct"): h["ytd_change_pct"] = ed["ytd_change_pct"]
+            if ed.get("1y_change_pct"): h["1y_change_pct"] = ed["1y_change_pct"]
             if ed.get("this_week_status"): h["this_week_status"] = ed["this_week_status"]
-        elif ed.get("this_week_status"):
-            # Yahoo gives price move; AI adds news context — append if it adds new info
-            if "news" in ed["this_week_status"].lower() or len(ed["this_week_status"]) > len(h.get("this_week_status", "")):
-                h["this_week_status"] = ed["this_week_status"]
+        # When Yahoo provided the price, keep Yahoo's this_week_status — don't let AI overwrite with stale dates
 
     path.write_text(json.dumps(obj, indent=2, ensure_ascii=False) + "\n")
 
@@ -279,7 +323,7 @@ def refresh_watchlist(today_iso: str):
             print(f"  [yahoo] {ticker}: {s['price']}")
 
         try:
-            ed = research_watchlist(ticker, company_hint, needs_price=not yahoo_ok)
+            ed = research_watchlist(ticker, company_hint, needs_price=not yahoo_ok, today_iso=today_iso)
         except Exception as e:
             print(f"  ! Perplexity research failed for {ticker}: {e}", file=sys.stderr)
             continue
@@ -290,7 +334,8 @@ def refresh_watchlist(today_iso: str):
             s["verdict"] = ed["verdict"]
         if ed.get("why"): s["why"] = ed["why"]
         if ed.get("key_risk"): s["key_risk"] = ed["key_risk"]
-        if ed.get("sources"): s["sources"] = ed["sources"]
+        if ed.get("sources"):
+            s["sources"] = filter_sources(ed["sources"])
         if not yahoo_ok and ed.get("price"):
             s["price"] = ed["price"]
 
