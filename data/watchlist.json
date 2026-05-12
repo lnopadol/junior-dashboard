@@ -4,35 +4,40 @@
     {
       "ticker": "KFCHINA-T10PLUS-A",
       "company": "Krungsri China Tech 10 Plus Fund-A (KFCHINA-T10PLUS-A)",
-      "what_it_does": "This is a Thai mutual fund that invests in 10 to 15 high-liquidity technology stocks listed on the Hong Kong Stock Exchange, focusing on companies in the Hang Seng TECH Index or similar large-cap tech firms, using a rules-based strategy to outperform its benchmark.",
-      "price": "THB N/A (NAV as of Feb 27, 2026; no current quote available)",
+      "what_it_does": "This is a Thai mutual fund that invests in 10-15 high-conviction technology stocks listed on the Hong Kong Stock Exchange, focusing on companies in the Hang Seng TECH Index or similar large-cap tech firms, using a rules-based strategy.",
+      "price": "THB 8.23 (12 May 2026)",
       "verdict": "Wait",
-      "why": "The fund targets concentrated exposure to Chinese tech stocks, which have shown strong historical benchmark returns (e.g., Hang Seng TECH 1-year 37.47% as of late 2025), but lacks current 2026 performance data and operates in a volatile sector amid ongoing US-China tensions and regulatory risks. Beginners should wait for updated NAV and market stability before entering.",
-      "key_risk": "High concentration in 10-15 Chinese tech stocks exposes the fund to sector-specific downturns from regulatory crackdowns or geopolitical events.",
+      "why": "The fund targets concentrated Chinese tech stocks which have shown strong benchmark performance (Hang Seng TECH up 37% over 1 year as of late 2025), but its short track record since July 2025 inception makes it premature for beginners without proven long-term outperformance; recent price stability at THB 8.23 suggests monitoring for better entry amid China tech volatility.",
+      "key_risk": "The biggest risk is high concentration in 10-15 Chinese technology stocks, amplifying losses from sector downturns or regulatory pressures in China.",
       "sources": [
         {
           "name": "Krungsri Asset Management",
           "url": "https://www.krungsriasset.com/EN/FundDetail/?fund=KFCHINA-T10PLUS-A"
         },
         {
-          "name": "Krungsri Fund Factsheet PDF",
+          "name": "Krungsri Asset Management PDF",
           "url": "https://www.krungsriasset.com/DataWeb/AYFWeb/en/pdf/FFS_KFCHINA-T10PLUS-I_EN.pdf"
         },
         {
-          "name": "Krungsri Fund Presentation PDF",
+          "name": "Krungsri Asset Management Presentation",
           "url": "https://www.krungsriasset.com/DataWeb/AYFWeb/en/pdf/KFCHINA-T10PLUS_Presentation_EN.pdf?rnd=20250727020222"
         }
       ]
     },
     {
       "ticker": "KKP-GINFRAEQ-H",
-      "company": "",
-      "what_it_does": "",
-      "price": "",
+      "company": "KKP GINFRAEQ-H",
+      "what_it_does": "This is a Thai mutual fund that primarily invests in the Lazard Global Listed Infrastructure Equity Fund, focusing on global listed infrastructure equities with currency hedging.",
+      "price": "N/A (no current NAV available in provided data)",
       "verdict": "Wait",
-      "why": "",
-      "key_risk": "",
-      "sources": []
+      "why": "Infrastructure equities offer stable dividends and inflation protection, suitable for beginners seeking diversification, but without current performance data or recent NAV as of May 2026, it's prudent to wait for updated metrics amid potential global economic shifts.",
+      "key_risk": "The fund is exposed to equity market volatility and currency hedging costs, which could lead to underperformance if infrastructure sectors face regulatory or interest rate headwinds.",
+      "sources": [
+        {
+          "name": "SETTRADE",
+          "url": "https://www.settrade.com/th/mutualfund/quote/KKP%20GINFRAEQ-H/asset-allocation"
+        }
+      ]
     }
   ]
 }

@@ -1,85 +1,31 @@
 {
-  "as_of": "2026-05-09",
+  "as_of": "2026-05-12",
   "holdings": [
     {
       "ticker": "GIVN.SW",
       "company": "Givaudan SA",
-      "what_it_does": "Givaudan manufactures and supplies flavours and fragrances to consumer goods companies worldwide.",
-      "current_price": "CHF 2,779 (last close 08 May 2026)",
-      "ytd_change_pct": "-10.5%",
-      "1y_change_pct": "-30.5%",
-      "dividend_yield_pct": "~2.59% (recent)",
+      "what_it_does": "Givaudan manufactures and supplies fragrance, beauty, taste, and wellbeing ingredients and products to the global consumer goods industry.",
+      "current_price": "CHF 2,753 (last close 11 May 2026)",
+      "ytd_change_pct": "-11.4%",
+      "1y_change_pct": "-30.8%",
+      "dividend_yield_pct": "~2.1% (FY2025 estimated based on historical payout)",
       "why_own_it": [
-        "It is a global leader in the flavours and fragrances industry with a strong market position and innovation capabilities.",
-        "The company has delivered consistent sales growth, with full-year 2025 Group sales up 5.1% on a like-for-like basis.",
-        "It offers a reliable dividend with a history of shareholder value creation since its 2000 spin-off."
+        "Givaudan is a 230-year-old market leader in flavors and fragrances with a diversified customer base across food, beverage, personal care, and home care industries, providing stable long-term revenue.",
+        "The company generated CHF 7,472 million in sales in 2025 with 5.1% like-for-like growth, demonstrating resilience and consistent operational performance in a defensive consumer-linked sector.",
+        "As a specialty chemicals company with high barriers to entry and long-term customer contracts, Givaudan offers predictable cash flows suitable for buy-and-hold investors seeking exposure to consumer staples."
       ],
-      "one_thing_to_watch": "Monitor S&P Global's negative outlook due to slower growth, which could pressure profitability and credit ratings.",
-      "this_week_status": "Fell about -0.2% over the past week (close 08 May 2026).",
+      "one_thing_to_watch": "Monitor the company's ability to maintain pricing power and margin expansion amid inflationary pressures and potential slowdown in consumer spending, which could pressure profitability.",
+      "this_week_status": "Fell about -0.3% over the past week (close 11 May 2026).",
       "verdict": "Healthy",
       "sources": [
         {
-          "name": "Givaudan Investors",
+          "name": "Givaudan Investors Relations",
           "url": "https://www.givaudan.com/investors"
         },
         {
-          "name": "Givaudan Share Price",
-          "url": "https://www.givaudan.com/investors/investor-information/share-price"
+          "name": "Givaudan 2024 Integrated Report",
+          "url": "https://www.givaudan.com/files/giv-2024-integrated-report.pdf"
         },
-        {
-          "name": "Givaudan Financial Results",
-          "url": "https://www.givaudan.com/investors/financial-results"
-        }
-      ]
-    },
-    {
-      "ticker": "NESN.SW",
-      "company": "Nestlé S.A.",
-      "what_it_does": "Nestlé is the world's largest food and beverage company, producing well-known brands like Nescafé, Maggi, Nespresso, and Purina pet food.",
-      "current_price": "CHF 77.47 (last close 08 May 2026)",
-      "ytd_change_pct": "+1.3%",
-      "1y_change_pct": "-11.0%",
-      "dividend_yield_pct": "~4.0% (TTM)",
-      "why_own_it": [
-        "Nestlé has a 150-year history of consistent growth as a global leader in consumer staples with products sold in 185 countries.",
-        "It offers a reliable dividend with a yield around 4%, appealing for long-term income-focused investors.",
-        "The company's diverse portfolio of over 30 billion-CHF brands provides stability during economic downturns."
-      ],
-      "one_thing_to_watch": "Monitor rising input costs like cocoa and dairy, which could squeeze margins if not passed on to consumers.",
-      "this_week_status": "Fell about -2.0% over the past week (close 08 May 2026).",
-      "verdict": "Healthy",
-      "sources": [
-        {
-          "name": "Nestlé Investors",
-          "url": "https://www.nestle.com/investors"
-        },
-        {
-          "name": "Nestlé Shares and ADRs",
-          "url": "https://www.nestle.com/investors/shares-adrs"
-        },
-        {
-          "name": "SIX Swiss Exchange",
-          "url": "https://www.six-group.com/en/market-data/shares/share-explorer/share-details.CH0038863350CHF4.html"
-        }
-      ]
-    },
-    {
-      "ticker": "ROG.SW",
-      "company": "Roche Holding AG",
-      "what_it_does": "Roche Holding AG is a Swiss multinational healthcare company that develops and sells pharmaceuticals and diagnostic products worldwide.",
-      "current_price": "CHF 315.30 (last close 08 May 2026)",
-      "ytd_change_pct": "-3.1%",
-      "1y_change_pct": "+21.3%",
-      "dividend_yield_pct": "~3.12% (TTM)",
-      "why_own_it": [
-        "It is a global leader in biopharmaceuticals with a strong pipeline of innovative medicines for cancer, immunology, and other diseases.",
-        "The company generates stable revenue from both pharmaceuticals and diagnostics divisions, providing diversification within healthcare.",
-        "It offers a reliable dividend with a history of increases, appealing to long-term income-focused investors."
-      ],
-      "one_thing_to_watch": "Monitor patent expirations and biosimilar competition for key drugs like those in oncology, which could pressure future revenue growth.",
-      "this_week_status": "Fell about -1.0% over the past week (close 08 May 2026).",
-      "verdict": "Healthy",
-      "sources": [
         {
           "name": "SIX Swiss Exchange",
           "url": "https://www.six-group.com"
@@ -87,20 +33,61 @@
       ]
     },
     {
+      "ticker": "NESN.SW",
+      "company": "Nestlé S.A.",
+      "what_it_does": "Nestlé S.A. is a Swiss multinational company that manufactures and sells a wide range of food, beverage, and health products including brands like Nescafé, KitKat, and Maggi.",
+      "current_price": "CHF 76.10 (last close 11 May 2026)",
+      "ytd_change_pct": "-0.4%",
+      "1y_change_pct": "-11.7%",
+      "dividend_yield_pct": "~3.0% (TTM)",
+      "why_own_it": [
+        "Nestlé is the world's largest food and beverage company with a diverse portfolio of essential consumer brands sold globally.",
+        "It has a long history of consistent dividend payments, making it attractive for income-focused long-term investors.",
+        "The company's strong balance sheet and defensive business model provide stability during economic downturns."
+      ],
+      "one_thing_to_watch": "Monitor rising input costs from commodities and supply chain disruptions that could squeeze profit margins.",
+      "this_week_status": "Fell about -2.6% over the past week (close 11 May 2026).",
+      "verdict": "Healthy",
+      "sources": [
+        {
+          "name": "Nestlé Investor Relations",
+          "url": "https://www.nestle.com/investors/shares-adrs"
+        }
+      ]
+    },
+    {
+      "ticker": "ROG.SW",
+      "company": "Roche Holding AG",
+      "what_it_does": "Roche Holding AG is a Swiss biopharmaceutical and diagnostics company that develops oncology therapies, diagnostics products, and other healthcare solutions.",
+      "current_price": "CHF 319.40 (last close 11 May 2026)",
+      "ytd_change_pct": "-1.9%",
+      "1y_change_pct": "+22.0%",
+      "dividend_yield_pct": "~3.0% (TTM)",
+      "why_own_it": [
+        "Roche has a strong history of developing blockbuster oncology drugs through its Genentech division and a robust pipeline of innovative therapies.",
+        "It offers a reliable dividend yield around 3% with 29 years of payments, providing steady income for long-term holders.",
+        "The company maintains excellent financial health with high return on equity and low volatility, making it a defensive healthcare stock."
+      ],
+      "one_thing_to_watch": "Monitor pipeline success and regulatory approvals, as delays or failures in new drug launches could impact future revenue growth.",
+      "this_week_status": "Gained about +0.9% over the past week (close 11 May 2026).",
+      "verdict": "Healthy",
+      "sources": []
+    },
+    {
       "ticker": "KFCHINA-T10PLUS-A",
       "company": "Krungsri China Tech 10 Plus Fund-A (KFCHINA-T10PLUS-A)",
-      "what_it_does": "This Thai mutual fund invests in 10-15 leading Chinese technology companies listed on the Hong Kong Stock Exchange, focusing on those in the Hang Seng TECH Index with equal weighting.",
-      "current_price": "THB 7.54 (as of latest available data)",
-      "ytd_change_pct": "-17.88%",
+      "what_it_does": "This Thai mutual fund invests in 10-15 leading Chinese technology companies listed on the Hong Kong Stock Exchange, focusing on constituents of the Hang Seng TECH Index with equal weighting and quarterly rebalancing.",
+      "current_price": "฿8.23 THB (as of recent trading)",
+      "ytd_change_pct": "-12.36%",
       "1y_change_pct": "N/A",
       "dividend_yield_pct": "N/A (no dividend)",
       "why_own_it": [
-        "Gives beginners targeted exposure to China's top tech giants like those in Tencent and Alibaba for long-term growth in the world's largest internet market.",
-        "Uses a simple rule-based strategy with just 10-15 high-liquidity stocks to reduce complexity while capturing tech sector upside.",
-        "Tracks the Hang Seng TECH Index, a key benchmark for Chinese innovation leaders, aiming to outperform broader China large-cap markets over time."
+        "Provides targeted exposure to China's top tech giants like Tencent, Alibaba, and Xiaomi for potential high growth over the long term.",
+        "Offers diversification across 10-15 equally weighted stocks to reduce risk from any single company.",
+        "Tracks a benchmark that has historically outperformed broader Chinese market indices like the Hang Seng Index."
       ],
-      "one_thing_to_watch": "Monitor US-China trade tensions and Beijing's regulatory crackdowns on tech firms, which have historically caused sharp declines in Chinese tech valuations.",
-      "this_week_status": "No specific price action data available for the week ending May 9, 2026; Chinese tech sector showed modest recovery amid easing regulatory fears per recent reports.",
+      "one_thing_to_watch": "Monitor US-China geopolitical tensions and regulatory crackdowns on Chinese tech firms, which can cause sharp volatility in share prices.",
+      "this_week_status": "Limited data available for the week ending May 12, 2026; recent price around ฿8.23 THB with minor daily gains amid broader Chinese tech sector fluctuations.",
       "verdict": "Caution",
       "sources": [
         {
