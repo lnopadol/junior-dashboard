@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-05-09",
+  "as_of": "2026-05-12",
   "stocks": [
     {
       "ticker": "KFCHINA-T10PLUS-A",
@@ -23,6 +23,16 @@
           "url": "https://www.krungsriasset.com/DataWeb/AYFWeb/en/pdf/KFCHINA-T10PLUS_Presentation_EN.pdf?rnd=20250727020222"
         }
       ]
+    },
+    {
+      "ticker": "KKP-GINFRAEQ-H",
+      "company": "",
+      "what_it_does": "",
+      "price": "",
+      "verdict": "Wait",
+      "why": "",
+      "key_risk": "",
+      "sources": []
     }
   ]
 }
