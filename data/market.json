@@ -1,41 +1,41 @@
 {
-  "as_of": "2026-05-09",
+  "as_of": "2026-05-23",
   "market": {
     "macro": {
-      "headline_number": "US jobs (Apr 2026): +115,000 payrolls; unemployment 4.3%",
-      "takeaway": "The latest jobs report shows the economy is still adding jobs, which can keep interest rates higher for longer.",
+      "headline_number": "US inflation (CPI, Apr 2026): +0.6% m/m; +3.8% y/y",
+      "takeaway": "Inflation picked up in April, which matters because it can keep interest rates higher for longer (usually a headwind for stocks and bonds).",
       "source": {
-        "name": "U.S. Bureau of Labor Statistics (Employment Situation)",
-        "url": "https://www.bls.gov/news.release/empsit.nr0.htm"
+        "name": "U.S. Bureau of Labor Statistics (CPI)",
+        "url": "https://www.bls.gov/news.release/cpi.nr0.htm"
       }
     },
     "gold": {
-      "headline_number": "Gold (XAU/USD): $4,715.72/oz",
-      "takeaway": "Gold stayed firm as investors balanced high interest rates against ongoing geopolitical uncertainty.",
+      "headline_number": "Gold (GC=F): $4,510.50",
+      "takeaway": "Gold slipped over the past week, but it often stays in focus as a ‘shock absorber’ when investors worry about inflation or geopolitical risks.",
       "source": {
-        "name": "Realtime Finance Data (XAUUSD quote)",
+        "name": "Realtime Finance Data (GC=F quote)",
         "url": "https://www.perplexity.ai/finance/"
       }
     },
     "china": {
-      "headline_number": "China A-shares proxy (ASHR): $35.73",
-      "takeaway": "China A-shares can be holiday-closed on some days, so this uses the US-listed ASHR ETF as a proxy for CSI 300 performance.",
+      "headline_number": "China A-shares proxy (ASHR): $35.35",
+      "takeaway": "China A-shares may be holiday-closed on some days, so this uses the US-listed ASHR ETF as a proxy; China’s April retail sales grew only +0.2% y/y, suggesting consumer demand is still soft.",
       "source": {
-        "name": "Realtime Finance Data (ASHR quote)",
-        "url": "https://www.perplexity.ai/finance/"
+        "name": "National Bureau of Statistics of China (Retail Sales)",
+        "url": "https://www.stats.gov.cn/english/PressRelease/202605/t20260519_1963757.html"
       }
     },
     "thailand": {
-      "headline_number": "SET Index: 1,500.36",
-      "takeaway": "Thailand stocks dipped on the week while the Bank of Thailand kept its policy rate at 1.00% to support growth.",
+      "headline_number": "SET Index: 1,538.67",
+      "takeaway": "Thai stocks were a bit higher, while the Bank of Thailand kept its policy rate at 1.00% to support a slowing economy.",
       "source": {
         "name": "Bank of Thailand (MPC decision 2/2026)",
         "url": "https://www.bot.or.th/en/news-and-media/news/mpc/news-20260429-dw49y0B5.html"
       }
     },
     "us": {
-      "headline_number": "S&P 500: 7,397.43",
-      "takeaway": "U.S. stocks ended the week higher while the Fed kept its rate at 3.5%–3.75%, so markets are still watching inflation and jobs for the next move.",
+      "headline_number": "S&P 500: 7,474.07",
+      "takeaway": "U.S. stocks ended the week near highs as investors weighed inflation data against a Fed that is still holding rates at 3.5%–3.75%.",
       "source": {
         "name": "Federal Reserve (FOMC statement)",
         "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260429a.htm"
