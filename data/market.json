@@ -1,43 +1,43 @@
 {
-  "as_of": "2026-05-23",
+  "as_of": "2026-05-30",
   "market": {
     "macro": {
-      "headline_number": "US inflation (CPI, Apr 2026): +0.6% m/m; +3.8% y/y",
-      "takeaway": "Inflation picked up in April, which matters because it can keep interest rates higher for longer (usually a headwind for stocks and bonds).",
+      "headline_number": "US personal consumption spending +0.5% m/m (Apr 2026)",
+      "takeaway": "The latest U.S. data shows consumers still spending, which can keep growth resilient but may also keep inflation pressure from cooling quickly.",
       "source": {
-        "name": "U.S. Bureau of Labor Statistics (CPI)",
-        "url": "https://www.bls.gov/news.release/cpi.nr0.htm"
+        "name": "BEA — Personal Income and Outlays (Apr 2026)",
+        "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-april-2026"
       }
     },
     "gold": {
-      "headline_number": "Gold (GC=F): $4,510.50",
-      "takeaway": "Gold slipped over the past week, but it often stays in focus as a ‘shock absorber’ when investors worry about inflation or geopolitical risks.",
+      "headline_number": "Gold spot $4540.53/oz (about -0.4% vs ~1 week ago)",
+      "takeaway": "Gold ended the week slightly lower after a mid‑week dip, but it is still being supported by inflation worries and geopolitical uncertainty.",
       "source": {
-        "name": "Realtime Finance Data (GC=F quote)",
-        "url": "https://www.perplexity.ai/finance/"
+        "name": "Perplexity Finance quote (XAUUSD)",
+        "url": "https://www.perplexity.ai/finance"
       }
     },
     "china": {
-      "headline_number": "China A-shares proxy (ASHR): $35.35",
-      "takeaway": "China A-shares may be holiday-closed on some days, so this uses the US-listed ASHR ETF as a proxy; China’s April retail sales grew only +0.2% y/y, suggesting consumer demand is still soft.",
+      "headline_number": "ASHR $35.97 (about -0.4% vs ~1 week ago)",
+      "takeaway": "China A‑shares were roughly flat on the week; the latest official data shows retail sales up 1.9% (Jan–Apr), suggesting a modest (not booming) consumption recovery.",
       "source": {
-        "name": "National Bureau of Statistics of China (Retail Sales)",
+        "name": "China National Bureau of Statistics press release",
         "url": "https://www.stats.gov.cn/english/PressRelease/202605/t20260519_1963757.html"
       }
     },
     "thailand": {
-      "headline_number": "SET Index: 1,538.67",
-      "takeaway": "Thai stocks were a bit higher, while the Bank of Thailand kept its policy rate at 1.00% to support a slowing economy.",
+      "headline_number": "SET Index 1568.37; policy rate 1.00% (held)",
+      "takeaway": "Thailand’s market was basically unchanged on the day, and the BoT is still holding rates at 1.00%, which keeps borrowing costs relatively supportive but leaves limited room if growth slows.",
       "source": {
-        "name": "Bank of Thailand (MPC decision 2/2026)",
+        "name": "Bank of Thailand MPC statement (Apr 29, 2026)",
         "url": "https://www.bot.or.th/en/news-and-media/news/mpc/news-20260429-dw49y0B5.html"
       }
     },
     "us": {
-      "headline_number": "S&P 500: 7,474.07",
-      "takeaway": "U.S. stocks ended the week near highs as investors weighed inflation data against a Fed that is still holding rates at 3.5%–3.75%.",
+      "headline_number": "S&P 500 7581.25; Fed funds target 3.50%–3.75% (held)",
+      "takeaway": "U.S. stocks finished higher for the week while the Fed is still on hold—markets are effectively betting inflation won’t re‑accelerate enough to force new hikes.",
       "source": {
-        "name": "Federal Reserve (FOMC statement)",
+        "name": "Federal Reserve FOMC statement (Apr 29, 2026)",
         "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260429a.htm"
       }
     }
